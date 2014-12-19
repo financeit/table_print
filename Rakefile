@@ -1,5 +1,7 @@
 require 'rubygems'
 require 'bundler'
+require 'ci/reporter/rake/rspec'
+require 'ci/reporter/rake/cucumber'
 begin
   Bundler.setup(:default, :development)
 rescue Bundler::BundlerError => e
@@ -19,12 +21,12 @@ else
 end
 
 desc "Run specs"
-RSpec::Core::RakeTask.new do |t|
+RSpec::Core::RakeTask.new(spec: ['ci:setup:rspec']) do |t|
 end
 
 require "cucumber/rake/task"
 desc 'Run cucumber features'
-Cucumber::Rake::Task.new(:cucumber) do |task|
+Cucumber::Rake::Task.new(cucumber: ['ci:setup:cucumber']) do |task|
   task.cucumber_opts = ["features"]
 end
 

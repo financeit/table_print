@@ -42,3 +42,6 @@ pkg
 #
 # For vim:
 #*.swp
+#
+spec/reports/*
+features/reports/*
