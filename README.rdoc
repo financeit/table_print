@@ -10,7 +10,7 @@ see exactly the data you care about.
 This {three minute screencast}[http://tableprintgem.com] will give you a quick overview of table_print's most
 powerful features and how to use them.
 
-Things.
+Things will happen.
 
 == Installation
 
